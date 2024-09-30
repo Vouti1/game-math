@@ -13,13 +13,19 @@ public class SoftParent : MonoBehaviour
 
     void Update()
     {
-        transform.position = parent.TransformPoint(relativePosition);
-        transform.rotation = parent.rotation * relativeRotation;
+        if (parent != null)
+        {
+            transform.position = parent.TransformPoint(relativePosition);
+            transform.rotation = parent.rotation * relativeRotation;
+        }
     }
 
     public void UpdateRelativePosition()
     {
-        relativePosition = parent.InverseTransformPoint(transform.position);
-        relativeRotation = Quaternion.Inverse(parent.rotation) * transform.rotation;
+        if (parent != null)
+        {
+            relativePosition = parent.InverseTransformPoint(transform.position);
+            relativeRotation = Quaternion.Inverse(parent.rotation) * transform.rotation;
+        }
     }
 }

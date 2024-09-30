@@ -705,7 +705,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
+  m_Radius: 0.08
   m_Center: {x: 0, y: -0.12, z: 0}
 --- !u!114 &6023892515792707298
 MonoBehaviour:
@@ -1360,8 +1360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d470eb64a20ac49a118f43931b5978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hook: {fileID: 8658184023392300786}
-  concrete: {fileID: 6023892515792536319}
+  concrete: {fileID: 6023892515792707295}
 --- !u!33 &8658184023395725016
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1391,7 +1390,7 @@ MonoBehaviour:
   cable: {fileID: 8658184023392300798}
   minTrolleyPosition: -22
   maxTrolleyPosition: -10
-  minCablePosition: 20
+  minCablePosition: 25
   maxCablePosition: 41
   trolleySlider: {fileID: 1158646063}
   cableSlider: {fileID: 211911898}
